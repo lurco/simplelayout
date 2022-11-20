@@ -4,6 +4,9 @@
 
 html, body {
     font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .box {
@@ -54,10 +57,17 @@ html, body {
     color: lightcoral;
 }
 
+.l-breadcrumbs-wrapper {
+    align-self: flex-start;
+    width: var(--max-width);
+    margin-inline: auto;
+    padding: 1rem;
+}
+
 .breadcrumbs {
     background: lightgreen;
     max-width: var(--max-width);
-    margin: 1rem auto;
+    /*margin: 1rem;*/
 }
 
 .breadcrumbs__item {
@@ -70,10 +80,11 @@ html, body {
 .main {
     background: pink;
     max-width: var(--max-width);
-    min-height:
-            calc(100vh - 5.5rem - 2.149375rem - 2rem - 3.29875rem - 1rem);
+    /*min-height:*/
+    /*        calc(100vh - 5.5rem - 2.149375rem - 2rem - 3.29875rem - 1rem);*/
     margin: auto;
     display: flex;
+    flex: 1 0 auto;
 }
 
 .main-inner {
@@ -130,6 +141,7 @@ html, body {
 
 .footer {
     background: honeydew;
+    flex-shrink: 0;
 }
 
 .footer .footer__inner {
